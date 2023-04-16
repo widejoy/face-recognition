@@ -56,7 +56,10 @@ for j in range(image_2_loc):
   encoding_image_2 = face_recognition.face_encodings(image_2)[i]
   results = face_recognition.compare_faces([encoding_image_1],encoding_image_2,tolerance=0.5)
   if results[0]:
-    print("same")
+    flag = 1
   else:
-    print("diff")
-   
+    flag = 0
+if flag == 1:
+  print("the faces are same")
+else:
+  print("the faces are not same")
