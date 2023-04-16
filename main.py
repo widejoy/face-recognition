@@ -60,6 +60,11 @@ for j in range(image_2_loc):
   else:
     flag = 0
 if flag == 1:
-  print("the faces are same")
+  a="the faces are same"
 else:
-  print("the faces are not same")
+  a = "the faces are not same"
+root = Tk()
+frm = ttk.Frame(root, padding=50)
+frm.grid()
+ttk.Label(frm, text=a).grid(column=0, row=0)
+root.mainloop()
